@@ -70,7 +70,7 @@ button {
 
 .section-2 {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-gap: 20px;
   max-width: 1200px;
   margin: 60px auto;
@@ -78,7 +78,11 @@ button {
 }
 
 .section-2 img {
-  max-width: 350px;
+  /* max-width: 300px; */
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
 }
 
 .room {
@@ -244,4 +248,71 @@ footer {
 	[aria-expanded="true"] .open {
 		display: none;
 	}
+}
+
+#stickyFooter {
+  background-color: aqua;
+  max-width: 600px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  background-image: url(assets/sticky-footer-bg3.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 8px;
+  z-index: 20;
+}
+
+#stickyFooter .wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  align-items: center;
+}
+
+.wrapper .text {
+  grid-column: 3 / span 6;
+}
+
+.wrapper .btn {
+  grid-column: 11 / span 2;
+}
+
+#stickyFooter h5 {
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+
+#stickyFooter span {
+  font-size: 12px;
+}
+
+#stickyFooter button {
+  background-color: azure;
+  color: #2f2f1e;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+#stickyFooter .btn a {
+  padding: 0;
+}
+
+@media (max-width: 650px) {
+
+  #stickyFooter .wrapper{
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .wrapper .text,
+  .wrapper .btn {
+    grid-column: 1 / span 1;
+  }
 }
