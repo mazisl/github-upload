@@ -275,7 +275,7 @@ footer {
 }
 
 .wrapper .text {
-  grid-column: 3 / span 6;
+  grid-column: 2 / span 7;
 }
 
 .wrapper .btn {
